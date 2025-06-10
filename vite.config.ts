@@ -13,4 +13,11 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
+  build: {
+    rollupOptions: {
+      output: {
+        entryFileNames: `src/main.tsx`,
+      },
+    },
+  },
 });
