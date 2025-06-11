@@ -52,27 +52,27 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Header 
+      <Header
         onLoginClick={handleLoginClick}
         onCMSClick={handleCMSClick}
       />
-      
+
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/review/:id" element={<ReviewPage />} />
       </Routes>
-      
+
       <Footer />
-      
-      <LoginDialog 
-        open={showLogin} 
+
+      <LoginDialog
+        open={showLogin}
         onOpenChange={handleLoginDialogClose}
         onLoginSuccess={handleLoginSuccess}
       />
-      
-      <CMSDialog 
-        open={showCMS && isAuthenticated} 
-        onOpenChange={handleCMSDialogClose} 
+
+      <CMSDialog
+        open={showCMS && isAuthenticated}
+        onOpenChange={handleCMSDialogClose}
       />
     </div>
   );
